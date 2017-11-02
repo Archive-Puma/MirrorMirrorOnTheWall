@@ -3,7 +3,7 @@ import cv2
 import numpy as np
 from PIL import Image
 
-path = 'data/photos/all'
+path = 'data/photos'
 recognizer = cv2.createLBPHFaceRecognizer()
 
 
@@ -15,14 +15,14 @@ def getImageWithID(path):
     for img in imagePaths:
         emotionImg = Image.open(img).convert('L')
         emotionNP = np.array(emotionImg, 'uint8')
-        emotion = os.path.split(img)[1].split('_')[0]
-        ID = int(os.path.split(img)[1].split('_')[1].split('.')[0])
 
-        if(emotion == "angry"):
-            faces.append(emotionNP)
-            IDs.append(ID)
+        ID = int(os.path.split(img)[1].split('_')[0])
+        print(ID)
 
-        cv2.imshow("training", emotionNP)
+        faces.append(emotionNP)
+        IDs.append(ID)
+
+        cv2.imshow("Training...", emotionNP)
         cv2.waitKey(10)
     return IDs, faces
 
