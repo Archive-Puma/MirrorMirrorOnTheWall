@@ -16,19 +16,13 @@ Install the dependencies using the script:
 
 ```sh
 sh setup/requirements.txt
-```
-or
-```bash
 bash setup/requirements.txt
 ```
 
 If error `You must be root!` appears, try with *sudo*:
 
-```sh
-sudo sh setup/requirements.txt
-```
-or
 ```bash
+sudo sh setup/requirements.txt
 sudo bash setup/requirements.txt
 ```
 
