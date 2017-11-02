@@ -1,4 +1,4 @@
-<img src="https://cdn.rawgit.com/CosasDePuma/MirrorMirrorOnTheWall/7a013b72/.img/magicmirror%20(by%20elicoronel16).png" align="right" width="200">
+<img src="https://cdn.rawgit.com/CosasDePuma/MirrorMirrorOnTheWall/7a013b72/.img/magicmirror%20(by%20elicoronel16).png" align="right" width="300">
 
 # Mirror, Mirror on the Wall ...
 [![Python Version](https://img.shields.io/badge/python-2.7.13-yellow.svg?style=flat)](https://www.python.org/downloads/release/python-2713/) ![Made with Love](https://img.shields.io/badge/made%20with-<3-red.svg?style=flat) [![License](https://img.shields.io/github/license/CosasDePuma/MirrorMirrorOnTheWall.svg)](https://github.com/CosasDePuma/MirrorMirrorOnTheWall/blob/master/LICENSE)
