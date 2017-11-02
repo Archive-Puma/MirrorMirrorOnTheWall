@@ -1,12 +1,5 @@
 # Import OpenCV module
 import cv2
-import sys
-
-try:
-    folder = sys.argv[1]
-except IndexError:
-    print("Usage: python " + sys.argv[0] + " [emotion]")
-    sys.exit(1)
 
 # Get the camera
 camera = cv2.VideoCapture(0)
@@ -15,7 +8,7 @@ camera = cv2.VideoCapture(0)
 detector = cv2.CascadeClassifier("data/haarcascade_frontalface_default.xml")
 
 record = False
-
+emotion = 0
 filled = (0, 255, 0)
 sample = 1
 
@@ -39,8 +32,7 @@ while(True):
         if(record):
             sample = sample + 1
             cv2.imwrite(
-                "data/photos/" + folder + "/" +
-                folder + "_" + str(sample) + ".jpg",
+                "data/photos/" + str(emotion) + "_" + str(sample) + ".jpg",
                 gray[y:y + h, x:x + h])
 
         cv2.rectangle(frame, (x, y), (x + w, y + h), filled, 2)
@@ -54,6 +46,7 @@ while(True):
             record = False
             sample = 0
             filled = (0, 255, 0)
+            emotion = emotion + 1
             print("Stop recording...")
         else:
             record = True
