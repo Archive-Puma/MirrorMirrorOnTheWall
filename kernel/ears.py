@@ -16,11 +16,15 @@ class Ears(Thread):
         try:
             input_text = self.recognizer.recognize_google(
                 input_audio, language="es_ES")
-            print("You said: {0}".format(input_text.encode('utf-8')))
+            input_text = input_text.encode('utf-8')
+            print("You said: {0}".format(input_text))
+            return input_text
         except sr.UnknownValueError:
             print("No he entendido lo que has dicho")
         except sr.RequestError:
             print("No hay conexion a Internet")
+
+        return None
 
 
 def debug():
